@@ -1,6 +1,7 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { IntlProvider } from 'react-intl';
 import { connect } from 'react-redux';
+import propTypes from 'prop-types';
 
 export function IntlWrapper(props) {
   return (
@@ -11,8 +12,8 @@ export function IntlWrapper(props) {
 }
 
 IntlWrapper.propTypes = {
-  children: PropTypes.element.isRequired,
-  intl: PropTypes.object.isRequired,
+  children: propTypes.element.isRequired,
+  intl: propTypes.object.isRequired,
 };
 
 // Retrieve data from store as props

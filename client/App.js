@@ -5,6 +5,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { Router, browserHistory } from 'react-router';
 import IntlWrapper from './modules/Intl/IntlWrapper';
+import propTypes from 'prop-types';
 
 // Import Routes
 import routes from './routes';
@@ -25,5 +26,5 @@ export default function App(props) {
 }
 
 App.propTypes = {
-  store: React.PropTypes.object.isRequired,
+  store: propTypes.object.isRequired,
 };

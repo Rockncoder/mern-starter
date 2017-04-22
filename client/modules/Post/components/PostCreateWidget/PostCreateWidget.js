@@ -1,5 +1,6 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { injectIntl, intlShape, FormattedMessage } from 'react-intl';
+import propTypes from 'prop-types';
 
 // Import Style
 import styles from './PostCreateWidget.css';
@@ -32,8 +33,8 @@ export class PostCreateWidget extends Component {
 }
 
 PostCreateWidget.propTypes = {
-  addPost: PropTypes.func.isRequired,
-  showAddPost: PropTypes.bool.isRequired,
+  addPost: propTypes.func.isRequired,
+  showAddPost: propTypes.bool.isRequired,
   intl: intlShape.isRequired,
 };
 

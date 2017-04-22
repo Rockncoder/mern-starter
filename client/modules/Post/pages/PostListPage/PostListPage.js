@@ -1,5 +1,7 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import propTypes from 'prop-types';
+
 
 // Import Components
 import PostList from '../../components/PostList';
@@ -51,17 +53,17 @@ function mapStateToProps(state) {
 }
 
 PostListPage.propTypes = {
-  posts: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    content: PropTypes.string.isRequired,
+  posts: propTypes.arrayOf(propTypes.shape({
+    name: propTypes.string.isRequired,
+    title: propTypes.string.isRequired,
+    content: propTypes.string.isRequired,
   })).isRequired,
-  showAddPost: PropTypes.bool.isRequired,
-  dispatch: PropTypes.func.isRequired,
+  showAddPost: propTypes.bool.isRequired,
+  dispatch: propTypes.func.isRequired,
 };
 
 PostListPage.contextTypes = {
-  router: React.PropTypes.object,
+  router: propTypes.object,
 };
 
 export default connect(mapStateToProps)(PostListPage);
